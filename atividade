@@ -1,0 +1,19 @@
+ano=int(input('qual o seu ano de nascimento: '))
+idade=(2024-ano)
+estudo=(input('você estuda? '))
+trabalho=(input('você trabalha? '))
+if trabalho=='s':
+    resp = (input('qual regime? MEI ou estag ou outro'))
+    renda = int(input('qual é sua renda mensal'))
+    if (resp=='MEI') and (renda >= 6750):
+        print('cadastro reprovado')
+    elif (resp=='estag') and (estudo=='n'):
+        print('cadastro reprovado')
+    elif(estudo== 's') and (idade <14):
+        print('aprovado com ressalvas')
+elif trabalho=='n':
+    aposentado=(input('você é aposentado? '))
+    if(aposentado=='s') and (idade <62):
+        print('aprovado com ressalvas')
+    else:
+        print('reprovado')
