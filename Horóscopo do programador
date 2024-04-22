@@ -1,0 +1,28 @@
+mes = int(input('escreva o mes de nascimento em número inteiro: '))
+if mes < 1 or mes > 12:
+        print('não és digno do horoscopo')
+else:
+        if mes == 1:  
+                print('python')
+        elif mes == 2:
+                print('fortran')
+        elif mes == 3:
+                print('rust')
+        elif mes == 4:
+                print('Go')
+        elif mes == 5:
+                print('Java')
+        elif mes == 6:
+                print('JavaScript')
+        elif mes == 7:
+                print('C')
+        elif mes == 8:
+                print('PHP') 
+        elif mes == 9:
+                print('Haskell')
+        elif mes == 10:
+                print('Perl')
+        elif mes == 11:
+                print('Swift')
+        elif  mes == 12:
+                print('Kotlin')
