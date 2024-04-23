@@ -1,0 +1,5 @@
+number=int(input('digite um valor'))
+fatorial = 1
+for x in range(number):
+        fatorial = fatorial * (x+1)
+print('fatorial de ', number, 'é', fatorial)
