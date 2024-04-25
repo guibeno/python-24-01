@@ -1,0 +1,14 @@
+senha = 5
+# x=int(input('digite o código de 0 a 10: '))
+# if x == 5:
+#     print('senha correta')
+tent=0
+x=0
+while x != 5:
+    tent +=1
+    x=int(input('digite o código de 0 a 10: '))
+    if x != 5:
+        print('senha incorreta')
+    elif senha == 5:
+        print('senha correta')
+        print('total de tentativas:', tent)
