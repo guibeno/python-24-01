@@ -1,7 +1,9 @@
-altura=int(input('digite um número maior que 3 que é ímpar: '))
-if altura % 2 == 0: #7
+altura = int(input('digite um número maior que 3 que é ímpar: '))
+if altura % 2 == 0:  # 7
     altura += 1
-    print ('O valor digitado era par, usaremos', altura,'no lugar')
-metade = altura // 2 #3
-for linha in metade:
-        
+    print('O valor digitado era par, usaremos', altura, 'no lugar')
+metade = altura // 2  # 3
+for linha in range(matade + 1):  #4 #vai se repetir e vezes: 0,1,2,3
+    qtd_espacos = matade - linha #metade = 3 - linha = 0 na volta 1, na volta 2, na volta 3 
+    qtd_star = (2 * linha) + 1 # quantidade de '#'
+    print('.' * qtd_espacos + '#' * qtd_star)
