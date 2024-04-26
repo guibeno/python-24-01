@@ -1,0 +1,4 @@
+senha = 989
+for i in range (1, 999):
+    if i == senha:
+        print(i)
