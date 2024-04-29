@@ -1,0 +1,3 @@
+texto= 'mArCeLo'
+texto = texto.capitalize()
+print(texto)
