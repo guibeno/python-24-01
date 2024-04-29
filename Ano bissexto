@@ -1,7 +1,6 @@
-ano=int(input('digite o ano: '))
-if ano % 4 ==  0:
-        print('ano bissexto')
+ano =int(input('Digite um ano: '))
+if ano%4== 0:
+    print('O ano é bissexto')
 else:
-        ano = ano + (4 - ano % 4)
-        print('O ano não é bissexto')
-        print('O próximo ano bissexto será: ',ano)
+    ano=ano+(4 - ano%4)
+    print('O ano não é bissexto, o próximo ano bissexto será em',ano)
