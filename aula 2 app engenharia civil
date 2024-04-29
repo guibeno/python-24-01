@@ -1,8 +1,9 @@
-L=int(input('informe o primeiro número: '))
-A=int(input('informe o segundo número: '))
-print('Área do retângulo: ')
-print(L*A)
-print('Perímetro do retângulo: ')
-print(2*(L+A))
-print('A hipotenusa é: ')
-print((A**2+L**2)**(1/2))
+L = int(input('Digite o primeiro número: '))
+A = int(input('digite o segundo número: '))
+area = L * A
+print('Área do retângulo é:', area)
+perimetro = 2 * (L + A)
+print('Perímetro do retângulo é:', perimetro)
+hipotenusa =(L**2 + A**2)**(1/2)
+print('A hipotenusa é: ', hipotenusa)
+
