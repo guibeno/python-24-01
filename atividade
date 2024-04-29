@@ -31,3 +31,6 @@ elif (trabalho == 's') and (estudo == 's') and (idade >14 or idade <16):
     print('aprovado com ressalvas 6')
 elif (estudo == 'n') and (idade<14):
     print('aprovado com ressalvas 7')
+
+else:
+    print('Aprovado')
