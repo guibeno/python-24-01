@@ -1,0 +1,5 @@
+import random
+minhalista =[]
+for i in range(10):
+    minhalista.append(randint(1,100))
+    print(minhalista)
