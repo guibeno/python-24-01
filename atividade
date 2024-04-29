@@ -6,9 +6,10 @@ regime=input('Se sim, qual regime: mei, estagio ou outro. Se não trabalha, digi
 renda=int(input('qual a sua renda: '))
 aposentado=input('você é aposentado: ')
 idade = ano - 2024
-if (regime == 'mei') and (renda>6750):
+if 'aprovado':
+    if(regime == 'mei') and (renda>6750):
         print('Reprovado')
-elif (idade < 0 or idade > 150):
+    elif (idade < 0 or idade > 150):
         print('Reprovado')
     elif (regime == 'estagio') and (estudo == 'n'):
         print('Reprovado')
@@ -16,8 +17,12 @@ elif (idade < 0 or idade > 150):
         print('Reprovado')
     elif renda <0:
         print('Reprovado')
-elif (aposentado == 'n') and (regime == 'estagio'):
-    print('Aprovado com ressalvas')
-        if (trabalho == 's') and (estudo == 's') and (idade >14 <16):
-            print('aprovado com ressalvas')
-        elif
+elif 'aprovado com ressalvas':
+    if(aposentado == 's') and (idade<62):
+        print('Aprovado com ressalvas')
+    elif (trabalho == 's') and (estudo == 's') and (idade >14 or idade <16):
+        print('aprovado com ressalvas')
+    elif (estudo == 'n') and (idade<14):
+        print('aprovado com ressalvas')
+else:
+    print('Aprovado')
