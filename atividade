@@ -5,24 +5,29 @@ trabalho =input('Você trabalha: ')
 regime=input('Se sim, qual regime: mei, estagio ou outro. Se não trabalha, digite n: ')
 renda=int(input('qual a sua renda: '))
 aposentado=input('você é aposentado: ')
-idade = ano - 2024
-if 'aprovado':
-    if(regime == 'mei') and (renda>6750):
-        print('Reprovado')
-    elif (idade < 0 or idade > 150):
-        print('Reprovado')
-    elif (regime == 'estagio') and (estudo == 'n'):
-        print('Reprovado')
-    elif (trabalho == 's') and (idade < 14):
-        print('Reprovado')
-    elif renda <0:
-        print('Reprovado')
-elif 'aprovado com ressalvas':
-    if(aposentado == 's') and (idade<62):
-        print('Aprovado com ressalvas')
-    elif (trabalho == 's') and (estudo == 's') and (idade >14 or idade <16):
-        print('aprovado com ressalvas')
-    elif (estudo == 'n') and (idade<14):
-        print('aprovado com ressalvas')
-else:
-    print('Aprovado')
+idade = 2024 - ano
+print(ano)
+print(estudo)
+print(trabalho)
+print(regime)
+print(renda)
+print(aposentado)
+print(idade)
+
+if(regime == 'mei') and (renda>6750):
+    print('Reprovado 1')
+elif (idade < 0 or idade > 150):
+    print('Reprovado 2')
+elif (regime == 'estagio') and (estudo == 'n'):
+    print('Reprovado 3 ')
+elif (trabalho == 's') and (idade < 14):
+    print('Reprovado 4')
+elif renda <0:
+    print('Reprovado 5')
+
+elif(aposentado == 's') and (idade<62):
+    print('Aprovado com ressalvas 5')
+elif (trabalho == 's') and (estudo == 's') and (idade >14 or idade <16):
+    print('aprovado com ressalvas 6')
+elif (estudo == 'n') and (idade<14):
+    print('aprovado com ressalvas 7')
