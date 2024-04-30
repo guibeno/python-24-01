@@ -1,0 +1,15 @@
+nome=input('Digite seu nome: ')
+nome_cap = nome.capitalize()
+while (
+    (len(nome)<3) or
+    (nome != nome_cap) or
+    ('1' in nome) or
+    ('2' in nome) or
+    ('3' in nome) or
+    ('4' in nome) or
+    ('5' in nome) or
+    ('6' in nome) or
+    ('7' in nome) or
+    ('8' in nome) or
+    ('9' in nome) == true
+):
