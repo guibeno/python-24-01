@@ -17,24 +17,25 @@ def extrair_arquivo_zip_com_senha(senha):
 # Não alterar linhas acima:
 ################################################
 
-senha = 123
-extraido = extrair_arquivo_zip_com_senha(senha)
-if extraido:
-    print('Arquivo extraido')
-else:
-    print('Senha errada') #revisar aula 5, 6, 7
+from random import*
 
+achou='' #a senha correta vai aparecer entre as aspas
+senha= input('digite a senha: ')
+tentativas = 0
 
-senha = '9La2'
+letras=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] #caracteres que estarão presentes na senha
 
+while (achou !=senha): #loop de repetição até achar a senha correta
+    achou = ''
+    for letra in senha:
+        tentativas = tentativas+1  # somando as tentantivas
+        achouletra = letras[randint(0, 60)] #extraindo os caracteres da lista ( de 0 a 60 pois são 61 caracteres)
+        achou = str(achouletra)+str(achou) #passando os caracteres da lista em str
+    print(achou)
 
-x=[
-    ['1', '9']
-    ['q', 'w', 'e' ,'r' ,'t' ,'y' ,'u','i' ,'o' ,'p' ,'a' ,'s' ,'d','f' ,'g' ,'h' ,'j' ,'k' ,'l' ,'z' ,'x' ,'c' ,'v ','b' ,'n' ,'m ']
-    ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M']
-]
-for i in x:
-    print(i)
+print('a senha é: ', achou, 'e foi encontrada em',tentativas, 'vezes') #printando a senha encontrada
 
 
 
