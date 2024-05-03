@@ -1,36 +1,18 @@
-import zipfile
-
-NOME_ARQUIVO = "senha_bitcoin.zip"
-zip_file = zipfile.ZipFile(NOME_ARQUIVO, 'r')
-
-
-def extrair_arquivo_zip_com_senha(senha):
-    try:
-        zip_file.extractall(path='.', pwd=senha.encode('utf-8'))
-        return True
-    except:
-        pass
-    return False
-
-
-################################################
-# Não alterar linhas acima:
-################################################
 
 import string as st
 import random
 letras2 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-quatro=4
+
     #letras = st.ascii_letters
     #numeros = .digits
     #algarismos = letras + numeros
 aleatorio = print (''.join(
             random.SystemRandom().choices(
             letras2,k=4))
+#a senha é gerada porem sempre que vou fechar o parenteses da erro
 
-from random import*
 
 achou='' #a senha correta vai aparecer entre as aspas
 senha= input('digite a senha: ')
