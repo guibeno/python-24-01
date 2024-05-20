@@ -1,0 +1,10 @@
+hor_dia = int(input('quantas horas diárias você trabalha: '))
+val_hor = int(input('qual o seu ganho por hora trabalhada: '))
+num_fun = int(input('qual seu número do funcionário:'))
+dias = (input('você trabalha 6 dias por semana(se sim, digite s, se não, digite n: '))
+if dias == 's':
+    salf = hor_dia * val_hor * 26
+elif dias == 'n':
+    salf = hor_dia * val_hor * 22
+
+print('o funcionário número', num_fun,'possui salário de',salf,)
