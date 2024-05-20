@@ -1,0 +1,9 @@
+x = int(input('informe o 1 número: '))
+y= int(input('informe o 2 número: '))
+z= int(input('informe o 3 número: '))
+if (x > y) and (x > z):
+    print(x, 'é o maior número')
+elif (y > x) and (y>z):
+    print(y,'é o maior número')
+else:
+    print(z,'é o maior número')
