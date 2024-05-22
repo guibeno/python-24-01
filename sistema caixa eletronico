@@ -1,0 +1,35 @@
+saque = int(input('Digite o valor do saque: '))
+valor = 0
+valor = saque
+
+cinquenta = int(saque / 50)
+saque = saque % 50
+
+
+vinte = int(saque / 20)
+saque = saque % 20
+
+
+dez = int(saque / 10)
+saque = saque % 10
+
+
+cinco = int(saque / 5)
+saque = saque % 5
+
+
+dois = int(saque / 2)
+saque = saque % 2
+
+
+um = int(saque / 1)
+saque = saque % 1
+
+
+print('seu saque do total de ',valor,'será pago em:')
+print(cinquenta, 'notas de R$50')
+print(vinte, 'notas de R$20')
+print(dez, 'notas de R$10')
+print(cinco, 'notas de R$5')
+print(dois, 'notas de R$2')
+print(um, 'moedas de R$1')
