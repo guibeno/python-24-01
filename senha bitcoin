@@ -1,34 +1,70 @@
+import zipfile
 
-import string as st
-import random
-letras2 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+NOME_ARQUIVO = "senha_bitcoin (5).zip"
+zip_file = zipfile.ZipFile(NOME_ARQUIVO, 'r')
+
+
+def extrair_arquivo_zip_com_senha(senha):
+    try:
+        zip_file.extractall(path='.', pwd=senha.encode('utf-8'))
+        return True
+    except:
+        pass
+    return False
+
+
+################################################
+# Não alterar linhas acima:
+################################################
+
+
+letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-
-aleatorio = print (''.join(
-            random.SystemRandom().choices(
-            letras2,k=4))
-#a senha é gerada porem sempre que vou fechar o parenteses da erro
-
-
-achou='' #a senha correta vai aparecer entre as aspas
-senha= input('digite a senha: ')
+#for x in letras:
+    #for y in letras:
+        #for z in letras:
+            #senha = (str(x)+str(y)+str(z))
+            #extraido = extrair_arquivo_zip_com_senha(senha)
+            #if extraido:
+                #print('Arquivo extraido')
+                #exit()
+            #else:
+                #print('Senha errada')
+                #print(senha)
+import time
 tentativas = 0
+for x in letras:
+    for y in letras:
+        for z in letras:
+            for g in letras:
+                if [item for item in x if item not in y] and [item for item in z if item not in g]:
+                    if[item for item in y if item not in z]:
+                        senha = (str(x)+str(y)+str(z)+str(g))
+                        extraido = extrair_arquivo_zip_com_senha(senha)
+                        if extraido:
+                            print(senha)
+                            print('Arquivo extraido')
+                            print(tentativas)
+                            print('a senha encontrada é')
+                            time.sleep(2)
+                            print('TAN TAN TAN TAN')
+                            time.sleep(1)
+                            print('...')
+                            time.sleep(1)
+                            print('...')
+                            time.sleep(1)
+                            print('...')
+                            time.sleep(1)
+                            print(senha,'!')
+                            exit()
+                        else:
 
-letras=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] #caracteres que estarão presentes na senha
+                            print(senha)
+                            tentativas = tentativas + 1
+                            print(tentativas)
 
-while (achou !=senha): #loop de repetição até achar a senha correta
-    achou = ''
-    for letra in senha:
-        tentativas = tentativas+1  # somando as tentantivas
-        achouletra = letras[randint(0, 60)] #extraindo os caracteres da lista ( de 0 a 60 pois são 61 caracteres)
-        achou = str(achouletra)+str(achou) #passando os caracteres da lista em str
-    print(achou)
-
-print('a senha é: ', achou, 'e foi encontrada em',tentativas, 'vezes') #printando a senha encontrada
 
 
 
