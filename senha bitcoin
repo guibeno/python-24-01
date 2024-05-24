@@ -6,7 +6,7 @@ zip_file = zipfile.ZipFile(NOME_ARQUIVO, 'r')
 
 def extrair_arquivo_zip_com_senha(senha):
     try:
-        zip_file.extractall(path='.', pwd=senha.encode('utf-8'))
+        zip_file.extractall(path='../../Pictures', pwd=senha.encode('utf-8'))
         return True
     except:
         pass
@@ -18,9 +18,10 @@ def extrair_arquivo_zip_com_senha(senha):
 ################################################
 
 
+
 letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z''0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 #for x in letras:
     #for y in letras:
@@ -42,7 +43,7 @@ for x in letras: #buscando a 1 caracter na lista
                 senha = (str(x)+str(y)+str(z)+str(g)) #juntando as str
                 if senha.count(x) > 2 or senha.count(y) > 2 or senha.count(z) > 2 or senha.count(g) > 2:
                     continue#conferindo para que nenhuma senha seja testada com mais de 2 caracter repetidas
-                else:
+                    senha = (str(x) + str(y) + str(z) + str(g))
                     if senha == (x == '0' and y == '1' and z == '2' and g == '3') or (
                             x == '1' and y == '2' and z == '3' and g == '4') or (
                             x == '2' and y == '3' and z == '4' and g == '5') or (
@@ -60,28 +61,28 @@ for x in letras: #buscando a 1 caracter na lista
                             x == '3' and y == '2' and z == '1' and g == '0'):
                                 continue
 
-                    extraido = extrair_arquivo_zip_com_senha(senha)
-                    if extraido:
-                        print(senha)
-                        print('Arquivo extraido')
-                        print(tentativas)
-                        print('a senha encontrada é')
-                        time.sleep(2)
-                        print('TAN TAN TAN TAN')
-                        time.sleep(1)
-                        print('...')
-                        time.sleep(1)
-                        print('...')
-                        time.sleep(1)
-                        print('...')
-                        time.sleep(1)
-                        print(senha,'!')
-                        exit()
-                    else:
+                extraido = extrair_arquivo_zip_com_senha(senha)
+                if extraido:
+                    print(senha)
+                    print('Arquivo extraido')
+                    print(tentativas)
+                    print('a senha encontrada é')
+                    time.sleep(2)
+                    print('TAN TAN TAN TAN')
+                    time.sleep(1)
+                    print('...')
+                    time.sleep(1)
+                    print('...')
+                    time.sleep(1)
+                    print('...')
+                    time.sleep(1)
+                    print(senha,'!')
+                    exit()
+                else:
 
-                        print(senha)
-                        tentativas = tentativas + 1 #contabilizando a tentativa
-                        print(tentativas)
+                    print(senha)
+                    tentativas = tentativas + 1 #contabilizando a tentativa
+                    print(tentativas)
 
 
 
