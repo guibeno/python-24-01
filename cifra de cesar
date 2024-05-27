@@ -1,16 +1,29 @@
-#criptografar palavra
-
+#criptografia de cesar
 palavra = input('Digite a palavra: ')
 palavra = palavra.upper()
 print(palavra)
-CARACTERE = ['ABCDEFGHIJKLMNOPQRSTUVWYZ']
+CARACTERES = ['ABCDEFGHIJKLMNOPQRSTUVWYZ']
 chave = int(input('Digite o valor da chave: '))
 modo = input('digite E para embaralhar, e D para desembaralhar: ')
 aspas = ''
+num = 0
 for caractere in palavra:
-    for caractere in CARACTERE:
-        num = CARACTERE.find (caractere)
-        if modo == 'E':
+    if caractere in CARACTERES:
+        num = CARACTERES.find (caractere)
+        if modo == 'E' or 'e':
             num = num + chave
-        elif modo == 'D':
+        elif modo == 'D' or 'd':
             num = num - chave
+        if num + len(CARACTERES):
+                num = num - len(CARACTERES)
+        elif num < 0:
+                num = num + len(CARACTERES)
+                aspas = aspas + CARACTERES[num]
+    else:
+        aspas = aspas + caractere
+if modo == 'E' or 'e':
+    print('O texto criptografado é: ', aspas)
+elif modo == 'D' or 'd':
+    print('O texto decripafado é: ', aspas)
+else:
+    print('opção invalida')
