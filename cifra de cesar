@@ -3,9 +3,14 @@
 palavra = input('Digite a palavra: ')
 palavra = palavra.upper()
 print(palavra)
-CARACTER = ['ABCDEFGHIJKLMNOPQRSTUVWYZ']
+CARACTERE = ['ABCDEFGHIJKLMNOPQRSTUVWYZ']
 chave = int(input('Digite o valor da chave: '))
-for x in CARACTER:
-    for y in CARACTER:
-        palavra = palavra + 3 in len(CARACTER)
-        print(palavra)
+modo = input('digite E para embaralhar, e D para desembaralhar: ')
+aspas = ''
+for caractere in palavra:
+    for caractere in CARACTERE:
+        num = CARACTERE.find (caractere)
+        if modo == 'E':
+            num = num + chave
+        elif modo == 'D':
+            num = num - chave
