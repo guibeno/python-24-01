@@ -1,0 +1,11 @@
+#criptografar palavra
+
+palavra = input('Digite a palavra: ')
+palavra = palavra.upper()
+print(palavra)
+CARACTER = ['ABCDEFGHIJKLMNOPQRSTUVWYZ']
+chave = int(input('Digite o valor da chave: '))
+for x in CARACTER:
+    for y in CARACTER:
+        palavra = palavra + 3 in len(CARACTER)
+        print(palavra)
