@@ -1,0 +1,11 @@
+contador = 0
+def validador_parenteses(s: str) -> bool:
+    for char in s:
+        if char in '(':
+            contador =+ 1
+        elif char in ')':
+            contador =- 1
+        if contador == 0:
+            return False
+    return contador == 0
+print(validador_parenteses("()"))
