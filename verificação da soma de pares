@@ -1,0 +1,10 @@
+def soma_pares(numeros: list, alvo: int) -> bool:
+    for x in numeros:
+        for y in numeros:
+            if x + y == alvo:
+                return True
+
+    return False
+
+
+print(soma_pares([0,1, 3, 2, 4], 5))
