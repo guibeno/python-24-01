@@ -1,0 +1,29 @@
+#calculadora de datas
+MESES_31_DIAS = [1,3,5,7,8,10,12] #meses em numeros
+MESES_30_DIAS = [4,6,9,11]
+
+def solicita_int(msg: str, min :int = 0, max :int ##):
+
+def eh_bissexto()
+
+
+
+
+def solicita_data (): -> list:
+    print('Digite a data inicial')
+    dia = int(input('Digite o dia'))
+    mes = int(input('Digite o mes'))
+    ano = int(input('Digite o ano'))
+    return [dia,mes,ano]
+
+data_inicial = solicita_data()
+#dada_inicial = [24, 7 , 1991]
+data_ini_str = formata_data(datainicial)
+
+
+data_atual = solicita_data()
+data_atual_str = formata_data(data_atual)
+
+
+data_final = solicita_data()
+data_final_str = formata_data(data_final)
