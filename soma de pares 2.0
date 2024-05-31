@@ -1,0 +1,17 @@
+def soma_pares(numeros: list, alvo: int) -> bool:
+    for x in numeros:
+        for y in numeros:
+            for g in numeros:
+                if x + y == alvo:
+                    print('As somas que chegam no alvo são: ',str(x), '+' ,str(y), '=', alvo)
+                    return True
+                if x + y + g == alvo:
+                    print('As somas que chegam no alvo são: ', str(x), '+', str(y), '+', str(g), '=', alvo)
+                    return True
+    print('Não existem somas que chegam ao alvo')
+    return False
+
+
+
+print(soma_pares([6,3],9))
+print(soma_pares([3,3,3],9))
