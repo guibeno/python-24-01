@@ -1,0 +1,21 @@
+print('-' * 40)
+print('Seja bem vindo à sequência de Fibonacci')
+print('-' * 40)
+n = int(input('quantos valores você deseja saber: '))
+termo1 = 0
+termo2 = 1
+contador = 3
+print(termo1, '>' ,termo2,)
+while contador <= n:
+    termo3 = termo1 + termo2
+    print(termo2, '>', termo3)
+    termo1 = termo2
+    termo2 = termo3
+    termo3 = termo1 + termo2
+    contador += 1
+print('muito obrigado por usar o programa')
+print('-' * 40)
+
+#consiste em ir passando os valores para frente
+# 0   1   1  >  1   1  (soma)  >  1    (soma)   (nova soma)
+# t1  t2  t3 >  t1  t2  t3     >  t1     t2         t3
