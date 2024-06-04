@@ -17,7 +17,7 @@ timeM = int(timeM)
 if timeH > 1:
     if timeM > 1:
         if timeS > 1:
-            print(timeH,'hor', timeM,'min1777', timeS,'seg')
+            print(timeH,'hor', timeM,'min', timeS,'seg')
         else:
             print(timeH,'hor',  timeM,'min')
     else:
