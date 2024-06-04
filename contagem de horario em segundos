@@ -1,1 +1,37 @@
+#exercicios datas humanizadas(apresentar de forma entendida pelas pessoas)
+timeS = 'None'
+while not timeS.isnumeric():                                                   # enquanto não(while not) tempoS(input)
+    timeS = input('Digite um tempo em segundos / somente VALORES INTEIROS: ')  # ser numerico (isnumeric()) continue pedindo
+timeS = int(timeS)                                                            # o valor inteiro (input)
+
+timeM = timeS / 60
+print(timeM)
+timeS = timeS % 60
+print(timeS)
+timeH = timeM / 60
+print(timeH)
+timeM = timeM % 60
+print(timeM)
+timeH = int(timeH)
+timeM = int(timeM)
+if timeH > 1:
+    if timeM > 1:
+        if timeS > 1:
+            print(timeH,'hor', timeM,'min1777', timeS,'seg')
+        else:
+            print(timeH,'hor',  timeM,'min')
+    else:
+        if timeS > 1:
+            print(timeH,'hor', '0 min', timeS,'seg')
+        else:
+            print(timeH,'hor', '0 min', '0 seg')
+else:
+    if timeM > 1:
+        if timeS > 1:
+            print('0 hor',timeM,'min', timeS,'seg')
+        else:
+            print('0 hor',timeM,'min', '0 seg')
+    else:
+        print('0 hor','0 min', timeS,'seg')
+
 
