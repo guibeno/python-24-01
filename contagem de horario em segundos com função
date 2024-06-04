@@ -1,0 +1,9 @@
+def calculo (x):
+    minhora = 0
+    while x >= 60: #formula que calcula o total de horas, ao digitar um valor maior que 60 n variavel x, o valor 60 é subtraido e é adcionado +1 para a variavel hora
+        x = x - 60 #contudo quando o valor tornasse menor que x < 60, o valor de x contém os minutos
+        minhora += 1
+    return minhora, x,
+y = int(input('digite seg: '))
+print(calculo(y))
+
