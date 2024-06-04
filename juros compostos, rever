@@ -30,12 +30,16 @@ def calcular_juros_compostos_recursivo(principal, taxa, tempo):
     return calcular_juros_compostos_recursivo(principal, taxa, tempo - 1) * (1 + taxa)
 
 
-principal = 1000  # Principal inicial
-taxa = 0.05  # Taxa de juros de 5% (em decimal)
-tempo = 5  # 5 anos
+principal = float(input('Digite o valor total do juros a ser calculado: ')) # Principal inicial
+taxa = float(input('Qual a taxa de juros mensal: '))  # Taxa de juros de 5% (em decimal)
+tempo = float(input('Qual o tempo em anos do empréstimo: '))  # 5 anos
 
 montante_total = calcular_juros_compostos(principal, taxa, tempo)
 print(f"Montante total após {tempo} anos: R$ {montante_total}")
 
 montante_total = calcular_juros_compostos_recursivo(principal, taxa, tempo)
 print(f"Montante total após {tempo} anos: R$ {montante_total}")
+
+#x = 2000       *    (1 + 0.05)         ** 5
+#    valortotal        taxa anual        multiplicar pelos anos
+
