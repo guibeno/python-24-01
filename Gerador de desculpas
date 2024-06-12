@@ -1,18 +1,20 @@
 from random import choice
-
-
+contador = 0
 desculpa = input('Qual a desculpa você quer que eu invente: ')
 
-lista_introducao = ['você nem vai acreditar no que aconteceu, juro por tudo']
+while contador != 3:
 
-lista_quem_desculpa = ['o et Bilu ', 'o super homem', 'o neymar', 'minha vó']
+    lista_introducao = ['você nem vai acreditar no que aconteceu, juro por tudo']
 
-lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro']
+    lista_quem_desculpa = ['o et Bilu', 'o super homem', 'o neymar', 'minha vó']
 
-introducao = choice(lista_introducao)
+    lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro']
 
-quem_desculpa = choice(lista_quem_desculpa)
+    introducao = choice(lista_introducao)
 
-acao = choice(lista_acao)
+    quem_desculpa = choice(lista_quem_desculpa)
 
-print(f' Não vai dar para eu ir ao/a {desculpa} porque {introducao} {quem_desculpa} {acao}.')
+    acao = choice(lista_acao)
+
+    print(f' Não vai dar para eu ir ao/a {desculpa} porque {introducao} {quem_desculpa} {acao}.')
+    contador += 1
