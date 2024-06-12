@@ -1,0 +1,18 @@
+from random import choice
+
+
+desculpa = input('Qual a desculpa você quer que eu invente: ')
+
+lista_introducao = ['você nem vai acreditar no que aconteceu, juro por tudo']
+
+lista_quem_desculpa = ['o et Bilu ', 'o super homem', 'o neymar', 'minha vó']
+
+lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro']
+
+introducao = choice(lista_introducao)
+
+quem_desculpa = choice(lista_quem_desculpa)
+
+acao = choice(lista_acao)
+
+print(f' Não vai dar para eu ir ao/a {desculpa} porque {introducao} {quem_desculpa} {acao}.')
