@@ -1,0 +1,15 @@
+v = 5
+L = [1,2,3,4,10,v]
+if v in L:
+    print(v)
+    print('Valor encontrado na lista')
+else:
+    print(f'Valor não encontrado na lista: ', L)
+print(' ')
+v = 5
+L = [1,2,3,4,10,]
+if v in L:
+    print(v)
+    print('Valor encontrado na lista')
+else:
+    print(f'Valor não encontrado na lista: ', L)
