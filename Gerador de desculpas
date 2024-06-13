@@ -1,14 +1,14 @@
 from random import choice
-contador = 1
+contador = 0
 desculpa = input('Qual a desculpa você quer que eu invente: ')
-
-while contador != 4:
+lista_acao = []
+while contador <= len(lista_acao):
 
     lista_introducao = ['você nem vai acreditar no que aconteceu, juro por tudo']
 
     lista_quem_desculpa = ['o et Bilu', 'o super homem', 'o neymar', 'minha vó']
 
-    lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro']
+    lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro', '']
 
     introducao = choice(lista_introducao)
 
