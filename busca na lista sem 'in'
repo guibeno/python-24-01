@@ -1,10 +1,11 @@
 def verificador (lista, numero):
+    tent = 0
     for i in lista:
-        print(i)
         if i == numero:
-            print("numero secreto encontrado: ")
+            print("numero secreto encontrado: ", numero)
             exit()
         else:
-            print('numero secreto nao encontrado')
+            tent += 1
+            print('numero secreto não encontrado. Tentativa:', tent)
 
 verificador([1,2,3,10,4,5],10)
