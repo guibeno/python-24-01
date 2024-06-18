@@ -1,0 +1,11 @@
+IDADE_BASE = 18
+def verificar(idade: int) -> bool:
+
+    if idade >= 18:
+        return True
+    else:
+        return False
+
+idade = int(input('Digite sua idade: '))
+
+print(verificar(idade))
