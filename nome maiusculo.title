@@ -1,0 +1,7 @@
+nome = input('digite seu nome: ')
+while ' ' in nome:
+    nome = nome.title()
+    print(nome)
+    exit()
+else:
+    print('nome incorreto')
