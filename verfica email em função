@@ -1,0 +1,31 @@
+def verifica_email(email:str) -> bool:
+    if email.find('@') != 1:
+        return False
+
+    nome, site = email.split('@')
+    if not site.endswith('.com'):
+        return False
+
+    site = site.replace('.com', ' ')
+
+    char_validos = 'abcdefghijklmnpqrstuvxyz123456789'
+
+    for char in nome:
+        if char not in char_validos:
+            return False
+    return True
+
+
+#email = input("Digite seu email: ")
+#print(verifica_email(email))
+
+print(verifica_email('') == False)
+print(verifica_email('@') == False)
+print(verifica_email('@@') == False)
+print(verifica_email('abc@@abc.com') == False)
+print(verifica_email('abc@abc.edu') == False)
+
+print(verifica_email('abc@abc.com') == True)
+print(verifica_email('a23@123.com') == True)
+print(verifica_email('a_b_c@a_b_c.com') == True)
+print(verifica_email('a_b_c@a_b_c.com') == True)
