@@ -1,6 +1,6 @@
-x= int(input('digite a sua 1 nota: '))
-y=int(input('digite a sua 2 nota: '))
-z=int(input('digite a sua 3 nota: '))
+x= float(input('digite a sua 1 nota: '))
+y= float(input('digite a sua 2 nota: '))
+z=float(input('digite a sua 3 nota: '))
 nota = (x + y + z)/3
 print('sua nota é: ',nota)
 if nota < 6:
