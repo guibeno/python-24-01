@@ -1,0 +1,5 @@
+soma_str = 'G45u4i16514l564h54158e5415rm5561e'
+total = 0
+for char in soma_str:
+    if char.isalpha():
+        print(char, end='')
