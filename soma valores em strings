@@ -1,0 +1,7 @@
+soma_str = '5ab635sfdabhfs3'
+total = 0
+for char in soma_str:
+    if char.isnumeric():
+        num = int(char)
+        total += num
+print(total)
