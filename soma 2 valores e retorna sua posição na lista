@@ -1,0 +1,9 @@
+def soma(lista, alvo):
+    for i in lista:
+        for g in lista:
+            if i + g == alvo:
+                print(lista.index(i))
+
+    return True
+
+soma([50,2, 7, 1, 15], 9)
