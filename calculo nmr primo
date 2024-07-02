@@ -1,0 +1,12 @@
+n = int(input('Digite um número para saber se é primo: '))
+cont = 0
+if n == 2:
+    print('primo')
+for c in range(1,n+1): #contagem de 1 em 1 até chegar em n
+    if n % c == 0:
+        print( c, end=' - ')
+        cont += 1
+if cont <= 2:
+    print(' número possui', cont,'divisores, portanto é um NUMERO PRIMO!')
+else:
+    print(' número possui', cont,'divisores, portanto é um NUMERO COMPOSTO!')
