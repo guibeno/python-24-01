@@ -36,6 +36,9 @@ if num == 1:
 
 
 else:
+    cem = int(saque / 100)
+    saque = saque % 100
+
     cinquenta = int(saque / 50)
     saque = saque % 50
 
@@ -59,6 +62,7 @@ else:
 
 
     print('seu saque do total de ',valor,'será pago em:')
+    print(cem,'notas de R$100')
     print(cinquenta, 'notas de R$50')
     print(vinte, 'notas de R$20')
     print(dez, 'notas de R$10')
