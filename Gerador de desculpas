@@ -8,7 +8,7 @@ while contador <= len(lista_acao):
 
     lista_quem_desculpa = ['o et Bilu', 'o super homem', 'o neymar', 'minha vó']
 
-    lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro', '']
+    lista_acao = ['roubou minha bicicleta', 'me chamou pra almoçar', 'me pediu em namoro', 'me beijou']
 
     introducao = choice(lista_introducao)
 
